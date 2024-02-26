@@ -3,11 +3,11 @@
 This is still a work in progress and there are still some bugs that need to be addressed. 
 
 #### **Known bugs**
-* plugging the macro pad triggers all the key sequences
+* Plugging the macro pad triggers all the key sequences
 * Weird behavior when stratagems are during cooldown
 
 #### **Wishlist**
-* some sort of visual/audio alert to notify you a certain stratagem is avaliable
+* Visual/audio alert to notify stratagem is avaliable
 * GUI to easily modify macros (drag and drop type of thingy) 
 
 ## **Video**
