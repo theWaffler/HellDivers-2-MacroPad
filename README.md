@@ -1,6 +1,6 @@
 # HellDivers-2-MacroPad
 
-## Video
+## **Video**
 [insert video here]
 
 ## **Build of Material**
@@ -12,3 +12,10 @@
 | 1 | 9 Pin Male Connector |
 | 1 | 9 Pin Female Connector |
 | 2 | M3 x 10 Cap Screw |
+
+## **Build Guide**
+[make build guide]
+
+### **Wiring**
+
+
