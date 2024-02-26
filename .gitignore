@@ -1,0 +1,33 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore Linux system files
+.*~
+
+# Ignore Arduino generated files
+*.hex
+*.elf
+*.bin
+*.eep
+*.ar
+
+# Ignore temporary files that can be regenerated
+tmp/
+temp/
+
+# Ignore project-specific settings
+*.sublime-project
+*.sublime-workspace
+
+# Ignore IDE configuration files
+.vscode/
+*.code-workspace
+.idea/
+
+# Ignore build output directories
+build/
+out/
