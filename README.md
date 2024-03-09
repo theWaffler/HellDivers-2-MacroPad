@@ -1,6 +1,6 @@
 # HellDivers-2-MacroPad
 
-This is still a work in progress and there are still some bugs that need to be addressed. 
+Work in progress and there are still some bugs that need to be addressed. 
 
 #### **Known bugs**
 * Plugging the macro pad triggers all the key sequences
