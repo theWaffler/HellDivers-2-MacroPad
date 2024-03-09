@@ -1,4 +1,4 @@
-/*
+/*bool
 Welcome, Hell Diver! I see you're looking for every advantage in spreading managed Democracy! 
 Below, you'll find code to help assign macro buttons to help call for reinforcements and other stratagems. 
 Remember, if this is illegal, Super Earth may not look kindly upon you.  
@@ -24,14 +24,14 @@ https://gamerant.com/helldivers-2-all-stratagams-button-inputs/
 // Define the button class to handle button states and debouncing
 class button {
 public:
-  const uint8_t pin; // Pin number associated with the button (0-255 bc memory)
-  boolean lastState = HIGH; // Last read state of the button
-  boolean currentState = HIGH; // Current debounced state of the button
-  unsigned long lastDebounceTime = 0; // Last time the button state was changed
-  const unsigned long debounceTime = 50; // Debounce delay to prevent flickering
-  boolean executeFlag = false; // Flag to indicate if a key sequence should be executed
+  const uint8_t pin; // pin number associated with the button (0-255 bc memory)
+  bool lastState = HIGH; // last read state of the button
+  bool currentState = HIGH; // current debounced state of the button
+  unsigned long lastDebounceTime = 0; // last time the button state was changed
+  const uint8_t debounceTime = 50; // prevents flickering (ms)
+  bool executeFlag = false; // indicates if a key sequence should be executed
 
-  // Constructor initializes the button with its associated pin
+  // constructor initializes the button with its associated pin
   button(uint8_t p) {
       pin = p;
       lastState = HIGH;
@@ -40,9 +40,9 @@ public:
       executeFlag = false;
   }
 
-  // Method to update the button state and set the execute flag if pressed
+  // update button state and set the execute flag if pressed
   void update() {
-    boolean reading = !digitalRead(pin); // Read the current state of the button
+    bool reading = !digitalRead(pin); // Read the current state of the button
     // Check if the button state has changed
     if (reading != lastState) {
       lastDebounceTime = millis(); // Reset the debouncing timer
