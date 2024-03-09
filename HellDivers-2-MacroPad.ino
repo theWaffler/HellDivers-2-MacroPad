@@ -24,15 +24,21 @@ https://gamerant.com/helldivers-2-all-stratagams-button-inputs/
 // Define the button class to handle button states and debouncing
 class button {
 public:
-  const uint8_t pin; // Pin number associated with the button
+  const uint8_t pin; // Pin number associated with the button (0-255 bc memory)
   boolean lastState = HIGH; // Last read state of the button
   boolean currentState = HIGH; // Current debounced state of the button
   unsigned long lastDebounceTime = 0; // Last time the button state was changed
-  const unsigned long debounceTime = 55; // Debounce delay to prevent flickering
+  const unsigned long debounceTime = 50; // Debounce delay to prevent flickering
   boolean executeFlag = false; // Flag to indicate if a key sequence should be executed
 
   // Constructor initializes the button with its associated pin
-  button(uint8_t p) : pin(p), lastState(HIGH), currentState(HIGH), lastDebounceTime(0), executeFlag(false) {}
+  button(uint8_t p) {
+      pin = p;
+      lastState = HIGH;
+      currentState = HIGH;
+      lastDebounceTime = 0;
+      executeFlag = false;
+  }
 
   // Method to update the button state and set the execute flag if pressed
   void update() {
@@ -104,7 +110,7 @@ void executeKeySequence1() {
   delay(100);
   Keyboard.release(KEY_PAGE_DOWN);
   delay(50);
-
+  
   Keyboard.press(KEY_DOWN_ARROW);
   delay(100);
   Keyboard.release(KEY_DOWN_ARROW);
@@ -236,37 +242,37 @@ void executeKeySequence4() {
   delay(50);
 }
 
-// Railgun
+// Oribtal Railgun
 // right, up, down, down, right
 void executeKeySequence5(){
   // pull up strat menu
   Keyboard.press(KEY_PAGE_DOWN);
-  delay(100);
+  delay(50);
   Keyboard.release(KEY_PAGE_DOWN);
   delay(50);
 
   Keyboard.press(KEY_RIGHT_ARROW);
-  delay(100);
+  delay(50);
   Keyboard.release(KEY_RIGHT_ARROW);
   delay(50);
 
   Keyboard.press(KEY_UP_ARROW);
-  delay(100);
+  delay(50);
   Keyboard.release(KEY_UP_ARROW);
   delay(50);
 
   Keyboard.press(KEY_DOWN_ARROW);
-  delay(100);
+  delay(50);
   Keyboard.release(KEY_DOWN_ARROW);
   delay(50);
 
   Keyboard.press(KEY_DOWN_ARROW);
-  delay(100);
+  delay(50);
   Keyboard.release(KEY_DOWN_ARROW);
   delay(50);
 
   Keyboard.press(KEY_RIGHT_ARROW);
-  delay(100);
+  delay(50);
   Keyboard.release(KEY_RIGHT_ARROW);
   delay(50);
 }
