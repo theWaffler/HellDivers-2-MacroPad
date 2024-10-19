@@ -3,8 +3,8 @@
 Work in progress. There's some bug(s) that require attention. 
 
 #### **Known bugs**
-* Plugging the macro pad triggers all the key sequences
-* Weird behavior when stratagems are during cooldown
+* ~~Plugging the macro pad triggers all the key sequences~~
+* ~~Weird behavior when stratagems are during cooldown~~
 
 #### **Wishlist**
 * Visual/audio alert to notify stratagem is avaliable
